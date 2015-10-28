@@ -1,0 +1,11 @@
+CREATE DATABASE IF NOT EXISTS smsDB;
+USE smsDB;
+DROP TABLE IF EXISTS sms_records;
+CREATE TABLE IF NOT EXISTS sms_records (
+   sms_id INT NOT NULL AUTO_INCREMENT,
+   phone_number VARCHAR(11) NOT NULL,
+   message  VARCHAR(255) NOT NULL,
+   send_date DATETIME NOT NULL,
+   send_status VARCHAR(40) NOT NULL,
+   PRIMARY KEY (sms_id)
+);
